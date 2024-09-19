@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Panitia Kegiatan XYZ</title>
+    <link rel="stylesheet" href="latihan1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Formulir Pendaftaran Panitia Kegiatan mabim</h1>
+            <form id="registrationForm">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required><br>
+
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" name="nim" required><br>
+
+                <label for="kelas">Kelas:</label>
+                <input type="text" id="kelas" name="kelas" required><br>
+
+                <label for="alamat">Alamat:</label>
+                <input type="text" id="alamat" name="alamat" required><br>
+
+                <button type="submit">Kirim</button>
+            </form>
+
+            <div id="displayData" class="hidden">
+                <h2>Data yang Anda Masukkan</h2>
+                <p><strong>Nama:</strong> <span id="displayNama">-</span></p>
+                <p><strong>NIM:</strong> <span id="displayNIM">-</span></p>
+                <p><strong>Kelas:</strong> <span id="displayKelas">-</span></p>
+                <p><strong>Alamat:</strong> <span id="displayAlamat">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="latihan1.js"></script>
+</body>
+</html>
