@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit data pengguna</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 0 auto;
+            width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        form input[type="text"], form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        /* Hover effect untuk input */
+        form input[type="text"]:focus, form input[type="email"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Edit Data Pengguna</h2>
+    <form action="/update/<%= user.id %>" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required value="<%= user.name %>"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required value="<%= user.email %>"><br>
+        <label for="phone">Telepon:</label>
+        <input type="text" id="phone" name="phone" required value="<%= user.phone %>"><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
